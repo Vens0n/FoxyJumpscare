@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "foxyjumpscare",
+  "version": "${version}",
+  "name": "FoxyJumpscare",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/foxyjumpscare/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "foxx.venson.foxyjumpscare.client.FoxyjumpscareDataGenerator"
+    ],
+    "client": [
+      "foxx.venson.foxyjumpscare.client.FoxyjumpscareClient"
+    ],
+    "main": [
+      "foxx.venson.foxyjumpscare.Foxyjumpscare"
+    ]
+  },
+  "mixins": [
+    "foxyjumpscare.mixins.json",
+    {
+      "config": "foxyjumpscare.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
